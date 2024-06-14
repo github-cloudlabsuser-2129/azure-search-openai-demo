@@ -1,3 +1,80 @@
+aiofiles==23.2.1: Asynchronous file read/write support using asyncio.
+aiohttp==3.9.5: Asynchronous HTTP client/server for asyncio and Python.
+aiosignal==1.3.1: Helper for signaling and shutting down asyncio applications.
+annotated-types==0.7.0: Provides runtime information about types.
+anyio==4.4.0: High level compatibility layer for multiple asynchronous event loop implementations.
+asgiref==3.8.1: ASGI (Asynchronous Server Gateway Interface) compatibility library.
+attrs==23.2.0: Classes without boilerplate.
+azure-ai-documentintelligence==1.0.0b3: Client library for Azure AI Document Intelligence service.
+azure-cognitiveservices-speech==1.38.0: Microsoft Azure Cognitive Services Speech SDK.
+azure-common==1.1.28: Microsoft Azure common code.
+azure-core==1.30.2: Microsoft Azure Core Library for Python.
+azure-core-tracing-opentelemetry==1.0.0b11: OpenTelemetry tracing plugin for Azure SDKs.
+azure-identity==1.16.1: Microsoft Azure Identity Library for Python.
+azure-monitor-opentelemetry==1.6.0: Azure Monitor exporters for OpenTelemetry.
+azure-monitor-opentelemetry-exporter==1.0.0b26: Azure Monitor exporter for OpenTelemetry.
+azure-search-documents==11.6.0b1: Client library for Azure Search.
+azure-storage-blob==12.20.0: Microsoft Azure Storage Blob Client Library for Python.
+azure-storage-file-datalake==12.15.0: Microsoft Azure Storage DataLake Client Library for Python.
+beautifulsoup4==4.12.3: Library for pulling data out of HTML and XML files.
+blinker==1.8.2: Fast, simple object-to-object and broadcast signaling.
+certifi==2024.6.2: Python package for providing Mozilla's CA Bundle.
+cffi==1.16.0: Foreign Function Interface for Python calling C code.
+charset-normalizer==3.3.2: The Real First Universal Charset Detector.
+click==8.1.7: A simple wrapper around optparse for powerful command line utilities.
+cryptography==42.0.8: Cryptographic recipes and primitives to Python developers.
+deprecated==1.2.14: Python decorator to deprecate old python classes, functions or methods.
+distro==1.9.0: Reliable machine-readable Linux distribution information for Python.
+ecdsa==0.19.0: ECDSA cryptographic signature library (pure python).
+fixedint==0.1.6: Fixed-size integer types.
+flask==3.0.3: A microframework based on Werkzeug, Jinja2 and good intentions.
+frozenlist==1.4.1: A list that can be frozen.
+h11==0.14.0: A pure-Python, bring-your-own-I/O implementation of HTTP/1.1.
+h2==4.1.0: HTTP/2 State-Machine based protocol implementation.
+hpack==4.0.0: Pure-Python HPACK header compression.
+httpcore==1.0.5: A minimal HTTP client, with HTTP/1.1 and HTTP/2 support.
+httpx[http2]==0.27.0: A fully featured HTTP client for Python 3, with support for HTTP/2 and HTTP/1.1.
+hypercorn==0.17.3: An ASGI Server based on Hyper libraries and inspired by Gunicorn.
+hyperframe==6.0.1: HTTP/2 framing layer for Python.
+idna==3.7: Internationalized Domain Names in Applications (IDNA).
+importlib-metadata==7.1.0: Read metadata from Python packages.
+isodate==0.6.1: An ISO 8601 date/time/duration parser and formatter.
+itsdangerous==2.2.0: Various helpers to pass trusted data to untrusted environments.
+jinja2==3.1.4: A small but fast and easy to use stand-alone template engine written in pure python.
+markupsafe==2.1.5: Implements a XML/HTML/XHTML Markup safe string for Python.
+microsoft-kiota-abstractions==1.3.3: Microsoft Kiota Abstractions.
+microsoft-kiota-authentication-azure==1.0.0: Microsoft Kiota Authentication Azure.
+microsoft-kiota-http==1.3.1: Microsoft Kiota HTTP.
+microsoft-kiota-serialization-json==1.2.0: Microsoft Kiota Serialization JSON.
+microsoft-kiota-serialization-text==1.0.0: Microsoft Kiota Serialization Text.
+msal==1.28.1: The Microsoft Authentication Library (MSAL) for Python.
+msal-extensions==1.1.0: Extensions for MSAL Python.
+msgraph-core==1.0.0: Microsoft Graph Core Library for Python.
+msgraph-sdk==1.1.0: Microsoft Graph SDK for Python.
+msrest==0.7.1: AutoRest swagger generator Python client runtime.
+multidict==6.0.5: Multidict implementation.
+numpy==1.26.4: NumPy is the fundamental package for array computing with Python.
+oauthlib==3.2.2: A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
+openai[datalib]==1.34.0: OpenAI's Python client library.
+openai-messages-token-helper==0.1.5: Helper for OpenAI Messages Token.
+opentelemetry-api==1.25.0: OpenTelemetry Python API.
+opentelemetry-instrumentation==0.46b0: OpenTelemetry Instrumentation.
+opentelemetry-instrumentation-aiohttp-client==0.46b0: OpenTelemetry aiohttp client instrumentation.
+opentelemetry-instrumentation-asgi==0.46b0: OpenTelemetry ASGI instrumentation.
+opentelemetry-instrumentation-dbapi==0.46b0: OpenTelemetry DB API instrumentation.
+opentelemetry-instrumentation-django==0.46b0: OpenTelemetry Django instrumentation.
+opentelemetry-instrumentation-fastapi==0.46b0: OpenTelemetry FastAPI instrumentation.
+opentelemetry-instrumentation-flask==0.46b0: OpenTelemetry Flask instrumentation.
+opentelemetry-instrumentation-httpx==0.46b0: OpenTelemetry httpx instrumentation.
+opentelemetry-instrumentation-openai==0.22.0: OpenTelemetry OpenAI instrumentation.
+opentelemetry-instrumentation-psycopg2==0.46b0: OpenTelemetry psycopg2 instrumentation.
+opentelemetry-instrumentation-requests==0.46b0: OpenTelemetry requests instrumentation.
+opentelemetry-instrumentation-urllib==0.46b0: OpenTelemetry urllib instrumentation.
+opentelemetry-instrumentation-urllib3==0.46b0: OpenTelemetry urllib3 instrumentation.
+opentelemetry-instrumentation-wsgi==0.46b0: OpenTelemetry WSGI instrumentation.
+opentelemetry-resource-detector-azure==0.1.5: OpenTelemetry Resource Detector for Azure.
+opentelemetry-sdk==1.25.0: OpenTelemetry Python SDK.
+Please note that the versions mentioned are the ones specified in the requirements.txt file and might not be the latest versions available.
 #
 # This file is autogenerated by pip-compile with Python 3.11
 # by the following command:

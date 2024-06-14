@@ -1,3 +1,5 @@
+
+
 import os
 from abc import ABC
 from dataclasses import dataclass
@@ -30,6 +32,8 @@ from text import nonewlines
 
 @dataclass
 class Document:
+    """Represents a document with its properties and metadata."""
+
     id: Optional[str]
     content: Optional[str]
     embedding: Optional[List[float]]
@@ -44,6 +48,7 @@ class Document:
     reranker_score: Optional[float] = None
 
     def serialize_for_results(self) -> dict[str, Any]:
+        """Serializes the document object into a dictionary for results."""
         return {
             "id": self.id,
             "content": self.content,
@@ -85,12 +90,16 @@ class Document:
 
 @dataclass
 class ThoughtStep:
+    """Represents a step in a thought process with a title, description, and optional properties."""
+
     title: str
     description: Optional[Any]
     props: Optional[dict[str, Any]] = None
 
 
 class Approach(ABC):
+    """Abstract base class for different approaches."""
+
     def __init__(
         self,
         search_client: SearchClient,
@@ -118,6 +127,7 @@ class Approach(ABC):
         self.vision_token_provider = vision_token_provider
 
     def build_filter(self, overrides: dict[str, Any], auth_claims: dict[str, Any]) -> Optional[str]:
+        """Builds the filter string based on the provided overrides and authentication claims."""
         exclude_category = overrides.get("exclude_category")
         security_filter = self.auth_helper.build_security_filters(overrides, auth_claims)
         filters = []
@@ -140,6 +150,7 @@ class Approach(ABC):
         minimum_search_score: Optional[float],
         minimum_reranker_score: Optional[float],
     ) -> List[Document]:
+        """Performs a search based on the provided parameters and returns a list of documents."""
         search_text = query_text if use_text_search else ""
         search_vectors = vectors if use_vector_search else []
         if use_semantic_ranker:
@@ -197,6 +208,7 @@ class Approach(ABC):
     def get_sources_content(
         self, results: List[Document], use_semantic_captions: bool, use_image_citation: bool
     ) -> list[str]:
+        """Returns the content of the sources based on the search results, semantic captions, and image citation settings."""
         if use_semantic_captions:
             return [
                 (self.get_citation((doc.sourcepage or ""), use_image_citation))
@@ -211,6 +223,7 @@ class Approach(ABC):
             ]
 
     def get_citation(self, sourcepage: str, use_image_citation: bool) -> str:
+        """Returns the citation for a source page based on the image citation setting."""
         if use_image_citation:
             return sourcepage
         else:
@@ -223,6 +236,7 @@ class Approach(ABC):
             return sourcepage
 
     async def compute_text_embedding(self, q: str):
+        """Computes the text embedding for the given query."""
         SUPPORTED_DIMENSIONS_MODEL = {
             "text-embedding-ada-002": False,
             "text-embedding-3-small": True,
@@ -245,6 +259,7 @@ class Approach(ABC):
         return VectorizedQuery(vector=query_vector, k_nearest_neighbors=50, fields="embedding")
 
     async def compute_image_embedding(self, q: str):
+        """Computes the image embedding for the given query."""
         endpoint = urljoin(self.vision_endpoint, "computervision/retrieval:vectorizeText")
         headers = {"Content-Type": "application/json"}
         params = {"api-version": "2023-02-01-preview", "modelVersion": "latest"}
